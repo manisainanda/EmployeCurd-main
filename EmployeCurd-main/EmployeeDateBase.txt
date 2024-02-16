@@ -1,0 +1,23 @@
+Create database Employee
+CREATE TABLE [dbo].[Employees](      
+    [Id] [int] IDENTITY(1,1) NOT NULL,      
+    [FirstName] [varchar](50) NOT NULL,    
+    [LastName] [varchar](50) NOT NULL,       
+    [Email] [varchar](50) NOT NULL,    
+    [City] [varchar](50) NOT NULL,      
+    [Salary] [int] NOT NULL,      
+PRIMARY KEY CLUSTERED       
+(      
+    [Id] ASC      
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]      
+) ON [PRIMARY] 
+
+INSERT INTO Employees (FirstName, LastName, Email, City, Salary)
+VALUES
+    ('John', 'Doe', 'john.doe@example.com', 'New York', 60000),
+    ('Jane', 'Smith', 'jane.smith@example.com', 'Los Angeles', 65000),
+    ('Michael', 'Johnson', 'michael.johnson@example.com', 'Chicago', 70000),
+    ('Emily', 'Williams', 'emily.williams@example.com', 'Houston', 62000),
+    ('James', 'Brown', 'james.brown@example.com', 'San Francisco', 68000);
+
+	Select * from Employees
